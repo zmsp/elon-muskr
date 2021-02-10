@@ -8,7 +8,7 @@ import requests
 import tweepy
 from conf import *
 
-import db
+from tweet_db import tweetdb
 from twitter_squeezer import Account
 
 
@@ -74,7 +74,7 @@ f = StringIO(response.content.decode())
 reader = csv.reader(f, delimiter=',')
 headers = next(reader, None)
 
-tweet_db = db.tweetdb(db_name="test.db")
+tweet_db = tweetdb(db_name="test.db")
 
 for row in reader:
     t = Account(whom=row[0], says=row[1].split(","), api=api, database=tweet_db, callback=cb)

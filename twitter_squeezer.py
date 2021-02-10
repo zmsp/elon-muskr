@@ -2,7 +2,7 @@ import sqlite3
 
 import tweepy
 
-import db as tweetDB
+import tweet_db as tweetDB
 
 
 class Account:

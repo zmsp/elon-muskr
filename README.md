@@ -13,3 +13,13 @@ See EXAMPLE folder for usage.
 
 Slack:![slack](https://i.imgur.com/5qzxqLb.png)  
 Google Spreadsheet:![google-docs](https://i.imgur.com/M52iCaW.png)
+
+
+## Running it in a time interval via cron
+To install the script on on cron run-
+```bash
+crontab -e
+0 6 * * * python3 cd /Users/username/{PROJECT_DIRECTORY} && python3 -m EXAMPLE.slacker > /tmp/cron.log # runs this everyday at 6:00 am and saves log to /tmp/cron.log
+```
+
+https://crontab.guru/examples.html
