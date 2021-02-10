@@ -2,8 +2,10 @@ import sqlite3
 
 
 class tweetdb:
-    def __init__(self, db_name="ttt.db"):
+    def __init__(self, db_name="twitter_squeezer.db"):
+
         self.con = sqlite3.connect(db_name)
+
         self.con.row_factory = sqlite3.Row
         self.initialize_table("test")
 
